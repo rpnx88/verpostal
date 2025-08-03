@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Legislativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      }
+      @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-in-out forwards;
+      }
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 0.5s ease-out forwards;
+      }
+      /* Custom styles for chart interaction and filter controls */
+      .recharts-yAxis-clickable-tick:hover text {
+        fill: #60a5fa; /* blue-400 */
+        text-decoration: underline;
+        font-weight: 500;
+      }
+      .clear-search-btn {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear 0.2s, opacity 0.2s;
+      }
+      .has-content .clear-search-btn {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.2s;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "recharts": "https://esm.sh/recharts@^3.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-900 text-gray-200">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

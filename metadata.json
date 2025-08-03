@@ -1,0 +1,6 @@
+{
+  "name": "Indicações - Ver. Postal (2025)",
+  "description": "Um painel interativo para visualizar, pesquisar e analisar dados de matérias legislativas. Inclui gráficos, filtros, ordenação e indicadores-chave de desempenho (KPIs) com base em dados estáticos extraídos de um documento oficial.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
