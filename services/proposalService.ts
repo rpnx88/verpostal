@@ -14,6 +14,7 @@ const CATEGORIES = [
 
 // Dados estáticos pré-analisados para substituir as chamadas de API
 const preCategorizedData: Record<string, { category: string; locations: string[], pdfUrl: string }> = {
+    'IND 987/2025': { category: 'Iluminação Pública', locations: ['Rua Professor Ângelo Roman Ross', 'bairro Licorsul'], pdfUrl: 'https://sapl.camarabento.rs.gov.br/media/sapl/public/materialegislativa/2025/34146/cmbgind202500987a.pdf' },
     'IND 980/2025': { category: 'Pavimentação e Vias', locations: ['Ruas Marcos Pedro Flaiban', 'Guerino Franzoloso'], pdfUrl: 'https://sapl.camarabento.rs.gov.br/media/sapl/public/materialegislativa/2025/34058/cmbgind202500980a.pdf' },
     'IND 194/2025': { category: 'Sinalização e Trânsito', locations: ['rua Antônio Martineli, 571', 'Empresa FVA'], pdfUrl: 'https://sapl.camarabento.rs.gov.br/media/sapl/public/materialegislativa/2025/31854/cmbgind202500194a.pdf' },
     'IND 185/2025': { category: 'Sinalização e Trânsito', locations: ['rua Domênico Zanetti', 'Lot. Zanetti'], pdfUrl: 'https://sapl.camarabento.rs.gov.br/media/sapl/public/materialegislativa/2025/31845/cmbgind202500185a.pdf' },
@@ -203,6 +204,13 @@ export const fetchProposals = (): Promise<Proposal[]> => {
 
 // Static data from PDF
 const ocrPdfText = `
+IND 987/2025 - Indicação
+Ementa:
+Solicita ao Poder Executivo Municipal através da Secretaria competente a substituição de lâmpadas na continuidade da Rua Professor Ângelo Roman Ross nas proximidades do nº 0095, no bairro Licorsul.
+Apresentação: 7 de Agosto de 2025
+Protocolo: 1549/2025, Data Protocolo: 07/08/2025 - Horário: 13:11:49
+Autor: Vereador Postal
+
 IND 980/2025 - Indicação
 Ementa:
 Solicita ao Poder Executivo Municipal através da Secretaria competente melhorias no pavimento das Ruas Marcos Pedro Flaiban e Guerino Franzoloso.
