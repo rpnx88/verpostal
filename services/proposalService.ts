@@ -14,6 +14,8 @@ const CATEGORIES = [
 
 // Dados estáticos pré-analisados para substituir as chamadas de API
 const preCategorizedData: Record<string, { category: string; locations: string[], pdfUrl: string }> = {
+    'IND 1048/2025': { category: 'Iluminação Pública', locations: ['praça', 'Hospital de Especialidades', 'UPA Zona Sul'], pdfUrl: 'https://sapl.camarabento.rs.gov.br/media/sapl/public/materialegislativa/2025/34597/cmbgind202501048a.pdf' },
+    'IND 1027/2025': { category: 'Pavimentação e Vias', locations: ['Rua Ângelo Marcon nº 837', 'bairro Ouro Verde'], pdfUrl: 'https://sapl.camarabento.rs.gov.br/media/sapl/public/materialegislativa/2025/34372/cmbgind202501027a.pdf' },
     'IND 987/2025': { category: 'Iluminação Pública', locations: ['Rua Professor Ângelo Roman Ross', 'bairro Licorsul'], pdfUrl: 'https://sapl.camarabento.rs.gov.br/media/sapl/public/materialegislativa/2025/34146/cmbgind202500987a.pdf' },
     'IND 980/2025': { category: 'Pavimentação e Vias', locations: ['Ruas Marcos Pedro Flaiban', 'Guerino Franzoloso'], pdfUrl: 'https://sapl.camarabento.rs.gov.br/media/sapl/public/materialegislativa/2025/34058/cmbgind202500980a.pdf' },
     'IND 194/2025': { category: 'Sinalização e Trânsito', locations: ['rua Antônio Martineli, 571', 'Empresa FVA'], pdfUrl: 'https://sapl.camarabento.rs.gov.br/media/sapl/public/materialegislativa/2025/31854/cmbgind202500194a.pdf' },
@@ -204,6 +206,20 @@ export const fetchProposals = (): Promise<Proposal[]> => {
 
 // Static data from PDF
 const ocrPdfText = `
+IND 1048/2025 - Indicação
+Ementa:
+Solicita ao Poder Executivo Municipal, através da Secretaria competente a ampliação e o melhoramento da iluminação pública, na praça e vias de acesso junto ao Hospital de Especialidades e UPA Zona Sul.
+Apresentação: 22 de Agosto de 2025
+Protocolo: 1649/2025, Data Protocolo: 22/08/2025 - Horário: 8:12:13
+Autor:  Vereador Postal
+
+IND 1027/2025 - Indicação
+Ementa:
+Solicita ao Poder Executivo Municipal através da Secretaria competente solução de pavimentação asfáltica na Rua Ângelo Marcon nº 837, bairro Ouro Verde por ação da prestadora de serviços de água e saneamento CORSAN.
+Apresentação: 15 de Agosto de 2025
+Protocolo: 1608/2025, Data Protocolo: 15/08/2025 - Horário: 12:57:10
+Autor: Vereador Postal
+
 IND 987/2025 - Indicação
 Ementa:
 Solicita ao Poder Executivo Municipal através da Secretaria competente a substituição de lâmpadas na continuidade da Rua Professor Ângelo Roman Ross nas proximidades do nº 0095, no bairro Licorsul.
